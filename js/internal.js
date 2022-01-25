@@ -1,10 +1,7 @@
 
 $(document).ready(function () {
 
-  //活动说明彈窗
-  $(".rule_bth").click(function () {
-    $(".rule").addClass("active");
-  });
+ 
   //影片彈窗
   $(".video_bth").click(function () {
     $(".md_video").addClass("active");
@@ -35,44 +32,7 @@ $(document).ready(function () {
     $(".menu_mob").slideToggle();
   });
 
-  //錨點移動
-  $(".m_a").click(function() {
-    $("html,body").animate({ scrollTop: $(".bootstrap").offset().top }, 800);
-  });
 
-  $(".m_b").click(function() {
-    $("html,body").animate({ scrollTop: $(".self").offset().top }, 800);
-  });
-
-  $(".m_c").click(function() {
-    $("html,body").animate({ scrollTop: $(".rwd_img").offset().top }, 800);
-  });
-
-  // 表格切換
-  $('.ranking_tab li').click(function (e) {
-    var $tabIndex = $(this).index();
-    $(this).addClass('active').siblings(".ranking_tab li").removeClass('active');
-    $('.ranking_table').eq($tabIndex).fadeIn().siblings(".ranking_table").hide();
-  });
-
-  // 輪播
-  var swiper = new Swiper('.swiper-container', {
-    //Pagination
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    //Arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 5000,
-    },
-    loop: 30,
-  });
 
   //浮動按鈕 隨捲軸移動
 
@@ -99,20 +59,6 @@ $(document).ready(function () {
 
 
 
-  //延遲載入
-  // 添加生命周期
-  const observer = lozad('.lozad', {
-    load: function (el) { // 生命周期：加载图片前
-      console.log(el.getAttribute('data-name') + '加载前(start)')
-      // 需要自定义图片src
-      el.src = el.getAttribute('data-src')
-    },
-    loaded: function (el) { // 加载完毕，实际图片还在pending中，页面还没显示图片
-      console.log(el.getAttribute('data-name') + '加载完毕(end)')
-      console.log(el)
-    }
-  })
-  observer.observe() // 加载，如果有新图片加入，再次执行即可
 
 
   //lighrbox
