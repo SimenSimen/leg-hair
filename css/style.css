@@ -654,7 +654,7 @@ body {
 }
 .cm3 {
   position: absolute;
-  top: 50%;
+  top: 500px;
   right: 20px;
   z-index: 9;
   -webkit-transform:  translateY(-50%);
@@ -1192,4 +1192,20 @@ footer {
     display: none;
   }
   
+  }
+
+  .op-info{
+    display: flex;
+    justify-content: space-between;
+  }
+  .op-btn{
+    display: inline-block;
+    background: #232323;
+    color:#fff;
+    border-radius:20px;
+    padding:0 10px;
+  }
+  .op-btn:hover{
+    background: rgb(223, 223, 223);
+    color:#232323;
   }
